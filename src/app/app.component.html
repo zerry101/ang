@@ -1,0 +1,23 @@
+<h1>angular app</h1>
+<button (click)="getStr('zishan')">CLick me</button>
+<br> 
+<br> 
+
+<input type="text" placeholder="eventKeyup" #box (keyup)="getData(box.value)">
+
+
+<br> 
+<br> 
+
+<input type="text" placeholder="eventKeyDown" #v (keydown)="getData(v.value)">
+
+
+<br> 
+<br> 
+
+<input type="text" placeholder="blur" #v2 (blur)="getData(v2.value)">
+
+<br> 
+<br> 
+
+<input type="text" placeholder="input" #v3 (input)="getData(v3.value)">
