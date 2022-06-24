@@ -1,33 +1,18 @@
 <h1>angular app</h1>
-<button (click)="getStr('zishan')">CLick me</button>
+<input type="text" placeholder="enter here" name="name" #box (keyup)="getValue(box.value)">
+
+<p>
+    
+value is :{{render_value}}
+</p>
+
+<p>==================================================================================================================   </p>
+
+<button (click)="inc_dec_val('minus')">--</button>
+<br>    
+<br>    
+<button (click)="inc_dec_val('add')">++</button>
+<br>    
 <br> 
-<br> 
+<p>value is :  {{count_1}}</p>
 
-<input type="text" placeholder="eventKeyup" #box (keyup)="getData(box.value)">
-
-
-<br> 
-<br> 
-
-<input type="text" placeholder="eventKeyDown" #v (keydown)="getData(v.value)">
-
-
-<br> 
-<br> 
-
-<input type="text" placeholder="blur" #v2 (blur)="getData(v2.value)">
-
-<br> 
-<br> 
-
-<input type="text" placeholder="input" #v3 (input)="getData(v3.value)">
-
-<br> 
-<br> 
-
-<h1 (mouseover)="getData('box')">ZIIII</h1>
-
-<br> 
-<br> 
-
-<h1 (mouseleave)="getData('box')">ZEDI</h1>
