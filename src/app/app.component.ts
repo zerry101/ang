@@ -36,4 +36,12 @@ name:string='peter';
 disable=false;
 
 
-}
+
+show=false;
+
+color="green";
+
+switch_color="red";
+
+
+}    

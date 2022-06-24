@@ -23,3 +23,48 @@ value is :{{render_value}}
 <br>
 <br>
 <input type="text" [value]=name [disabled]=disable>
+
+<p>==================================================================================================================   </p>
+
+
+<h1>This is if-else </h1>
+<h1 *ngIf="show; then ifBlock else elseBlock "></h1>
+
+<ng-template #ifBlock>
+    <p>if block</p> 
+</ng-template>
+
+<ng-template #elseBlock>
+    <p>this is else block</p>
+</ng-template>
+
+
+<p>==================================================================================================================   </p>
+
+
+<ng-template [ngIf]="color=='green'">
+    <p>The color is {{color}}</p>
+</ng-template>
+
+<ng-template [ngIf]="color=='red'">
+    <p>The color is {{color}}</p>
+</ng-template>
+
+<ng-template [ngIf]="color=='blue'">
+    <p>The color is {{color}}</p>
+</ng-template>
+
+<p>==================================================================================================================   </p>
+
+
+<div [ngSwitch]="switch_color">
+    <h1 *ngSwitchCase="'green'"><p>The Color is {{switch_color}}</p></h1>
+    <h1 *ngSwitchCase="'orange'"><p>The Color is {{switch_color}}</p></h1>
+    <h1 *ngSwitchCase="'red'"><p>The Color is {{switch_color}}</p></h1>
+    <h1 *ngSwitchCase="'blue'"><p>The Color is {{switch_color}}</p></h1>
+    <h1 *ngSwitchCase="'maroon'"><p>The Color is {{switch_color}}</p></h1>
+    <h1 *ngSwitchDefault><p>Unknown color</p></h1>
+</div>
+
+
+<p>==================================================================================================================   </p>
