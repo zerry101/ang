@@ -119,6 +119,13 @@
   ==================================================================================================================
 </p>
 
+<p>PARENT TO CHILD DATA </p>
+
 <ul *ngFor="let data of user_data">
   <app-user-details [item]=data></app-user-details>
 </ul>
+
+<p>CHILD TO PARENT DATA </p>
+
+<app-child [value]=data (update)="update_data($event)">
+</app-child>

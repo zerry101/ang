@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'my-app';
 
-  
+
 
 render_value='';
 val1: string='';
@@ -17,7 +17,7 @@ val1: string='';
  {
   console.log(val);
   this.render_value=val;
-  
+
  }
 
   count_1=0;
@@ -27,7 +27,7 @@ inc_dec_val(val1:string){
   val1=='add' ?this.count_1++:this.count_1--;
 
   console.log(this.count_1);
-  
+
 }
 
 
@@ -46,12 +46,12 @@ switch_color="red";
 users=["zishan","asim","sohel","farhan"];
 
 user_details=[{name:"zishan",email:"zi@gmail.com", social_accounts:['fb','insta','wp']},
-              {name:"sohel",email:"so@gmail.com",social_accounts:['fb','insta','wp']} 
+              {name:"sohel",email:"so@gmail.com",social_accounts:['fb','insta','wp']}
              ];
 
 
 s_color="green";
-
+data_value="";
 updateColor(){
   this.s_color="red";
 }
@@ -59,8 +59,13 @@ updateColor(){
 user_data=[
   {name:"zi",id:45},
   {name:"so",id:54},
-  {name:"io",id:65},
+  {name:"io",id:65}
 ]
 
+data:string='x';
+update_data(data_value:any){
+  console.log(data_value);
+  this.data=data_value;
+}
 
-}    
+}

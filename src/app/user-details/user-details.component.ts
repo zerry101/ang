@@ -8,8 +8,11 @@ import { Component, Input, OnInit } from '@angular/core';
 export class UserDetailsComponent implements OnInit {
 
   constructor() { }
-  
+
   @Input() item:{name:string,id:number|undefined}={name:'',id:0};
+
+  data_value:string="";
+
 
   ngOnInit(): void {
   }
