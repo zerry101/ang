@@ -56,4 +56,11 @@ updateColor(){
   this.s_color="red";
 }
 
+user_data=[
+  {name:"zi",id:45},
+  {name:"so",id:54},
+  {name:"io",id:65},
+]
+
+
 }    
