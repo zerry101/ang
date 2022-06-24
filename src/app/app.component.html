@@ -1,70 +1,112 @@
 <h1>angular app</h1>
-<input type="text" placeholder="enter here" name="name" #box (keyup)="getValue(box.value)">
+<input
+  type="text"
+  placeholder="enter here"
+  name="name"
+  #box
+  (keyup)="getValue(box.value)"
+/>
+
+<p>value is :{{ render_value }}</p>
 
 <p>
-    
-value is :{{render_value}}
+  ==================================================================================================================
 </p>
 
-<p>==================================================================================================================   </p>
-
 <button (click)="inc_dec_val('minus')">--</button>
-<br>    
-<br>    
+<br />
+<br />
 <button (click)="inc_dec_val('add')">++</button>
-<br>    
-<br> 
-<p>value is :  {{count_1}}</p>
+<br />
+<br />
+<p>value is : {{ count_1 }}</p>
 
-<p>==================================================================================================================   </p>
+<p>
+  ==================================================================================================================
+</p>
 
+<input type="text" value="{{ name }}" disabled="{{ disable }}" />
+<br />
+<br />
+<input type="text" [value]="name" [disabled]="disable" />
 
-<input type="text" value={{name}} disabled={{disable}}> 
-<br>
-<br>
-<input type="text" [value]=name [disabled]=disable>
+<p>
+  ==================================================================================================================
+</p>
 
-<p>==================================================================================================================   </p>
-
-
-<h1>This is if-else </h1>
-<h1 *ngIf="show; then ifBlock else elseBlock "></h1>
+<h1>This is if-else</h1>
+<h1 *ngIf="show; then ifBlock; else elseBlock"></h1>
 
 <ng-template #ifBlock>
-    <p>if block</p> 
+  <p>if block</p>
 </ng-template>
 
 <ng-template #elseBlock>
-    <p>this is else block</p>
+  <p>this is else block</p>
 </ng-template>
 
+<p>
+  ==================================================================================================================
+</p>
 
-<p>==================================================================================================================   </p>
-
-
-<ng-template [ngIf]="color=='green'">
-    <p>The color is {{color}}</p>
+<ng-template [ngIf]="color == 'green'">
+  <p>The color is {{ color }}</p>
 </ng-template>
 
-<ng-template [ngIf]="color=='red'">
-    <p>The color is {{color}}</p>
+<ng-template [ngIf]="color == 'red'">
+  <p>The color is {{ color }}</p>
 </ng-template>
 
-<ng-template [ngIf]="color=='blue'">
-    <p>The color is {{color}}</p>
+<ng-template [ngIf]="color == 'blue'">
+  <p>The color is {{ color }}</p>
 </ng-template>
 
-<p>==================================================================================================================   </p>
-
+<p>
+  ==================================================================================================================
+</p>
 
 <div [ngSwitch]="switch_color">
-    <h1 *ngSwitchCase="'green'"><p>The Color is {{switch_color}}</p></h1>
-    <h1 *ngSwitchCase="'orange'"><p>The Color is {{switch_color}}</p></h1>
-    <h1 *ngSwitchCase="'red'"><p>The Color is {{switch_color}}</p></h1>
-    <h1 *ngSwitchCase="'blue'"><p>The Color is {{switch_color}}</p></h1>
-    <h1 *ngSwitchCase="'maroon'"><p>The Color is {{switch_color}}</p></h1>
-    <h1 *ngSwitchDefault><p>Unknown color</p></h1>
+  <h1 *ngSwitchCase="'green'">
+    <p>The Color is {{ switch_color }}</p>
+  </h1>
+  <h1 *ngSwitchCase="'orange'">
+    <p>The Color is {{ switch_color }}</p>
+  </h1>
+  <h1 *ngSwitchCase="'red'">
+    <p>The Color is {{ switch_color }}</p>
+  </h1>
+  <h1 *ngSwitchCase="'blue'">
+    <p>The Color is {{ switch_color }}</p>
+  </h1>
+  <h1 *ngSwitchCase="'maroon'">
+    <p>The Color is {{ switch_color }}</p>
+  </h1>
+  <h1 *ngSwitchDefault><p>Unknown color</p></h1>
 </div>
 
+<p>
+  ==================================================================================================================
+</p>
 
-<p>==================================================================================================================   </p>
+<p>ngfor</p>
+<br />
+<br />
+
+<h1 *ngFor="let item of users">
+  <p>{{ item }}</p>
+</h1>
+
+<p>loop with Objects</p>
+<br />
+<br />
+
+<h1 *ngFor="let i of user_details">
+  <p>{{ i.name }}</p>
+  <ul *ngFor="let acc of i.social_accounts">
+    <li>{{acc}}</li>
+  </ul>
+</h1>
+
+<p>
+  ==================================================================================================================
+</p>
