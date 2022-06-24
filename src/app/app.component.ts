@@ -46,8 +46,14 @@ switch_color="red";
 users=["zishan","asim","sohel","farhan"];
 
 user_details=[{name:"zishan",email:"zi@gmail.com", social_accounts:['fb','insta','wp']},
-              {name:"sohel",email:"so@gmail.com",social_accounts:['fb','insta','wp']}   
-            ];
+              {name:"sohel",email:"so@gmail.com",social_accounts:['fb','insta','wp']} 
+             ];
 
+
+s_color="green";
+
+updateColor(){
+  this.s_color="red";
+}
 
 }    
