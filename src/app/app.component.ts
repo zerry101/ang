@@ -20,7 +20,7 @@ val1: string='';
   
  }
 
-count_1=0;
+  count_1=0;
 
 inc_dec_val(val1:string){
 
@@ -30,6 +30,10 @@ inc_dec_val(val1:string){
   
 }
 
+
+name:string='peter';
+
+disable=false;
 
 
 }
