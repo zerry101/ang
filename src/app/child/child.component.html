@@ -1,12 +1,35 @@
-
 <!-- <p>{{value}}</p> -->
 
-
-
 <!-- <li>{{box.value}}</li> -->
-<input type="text" #box  >
-<button (click)="arraypush(box.value) ; update.emit(box.value) ; box.value=''    "    >updata data</button>
+<form  [formGroup]="dataForm" (ngSubmit)="arraypush(this.dataForm.value)">
+  <div class="" style="margin-bottom: 10px;">
+    <input type="text"  formControlName="title"/>
+    <span *ngIf="control.touched && control.invalid">required</span>
+  </div>
+  <div class="" style="margin-bottom: 10px;">
+    <input type="text"  formControlName="message"/>
+    <span  *ngIf="this.dataForm.controls['message'].touched && this.dataForm.controls['message'].invalid">required</span>
+  </div>
+  <div class="" style="margin-bottom: 10px;">
+    <input type="text"  formControlName="amount"/>
+    <span  *ngIf="this.dataForm.controls['amount'].touched  && this.dataForm.controls['amount'].invalid">required</span>
+  </div>
+  <!-- <input type="submit" hidden> -->
+  <button type="submit">update data</button>
+</form>
 
-<ul *ngFor="let item_li of li_array">
-  <li>{{item_li}}</li>
-</ul>
+
+<table  border="1">
+  <tr>
+    <th>title</th>
+    <th>message</th>
+    <th>amount</th>
+    <th>action</th>
+  </tr>
+  <tr *ngFor="let item of list_array">
+    <td>{{item.title}}</td>
+    <td>{{item.message}}</td>
+    <td>{{item.amount}}</td>
+    <td><a href="javascript:void(0)" (click)="editRow(item)">Edit</a></td>
+  </tr>
+</table>
