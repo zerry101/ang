@@ -165,3 +165,21 @@
 <p>{{title|lowercase}}</p>
 <p>{{title|titlecase}}</p>
 
+<p>
+  ==================================================================================================================
+</p>
+
+<h1>form</h1>
+
+
+<form [formGroup]="loginform" (ngSubmit)="loginUser() ">
+  <br>
+  <input type="text" formControlName="user" name="user" >
+
+  <br>
+  <br>
+  <input type="password" formControlName="password" name="password">
+  <br>
+  <br>
+  <button>login</button>
+</form>

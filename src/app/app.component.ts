@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { FormGroup } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -77,6 +78,17 @@ name1 :any ;
 
 get_r_val(str:any){
   console.log(str);
+}
+
+
+
+loginform=new FormGroup({
+  user:new FormControl(''),
+  password:new FormControl('')
+});
+
+loginUser(){
+  console.warn(this.loginform.value);
 }
 
 
