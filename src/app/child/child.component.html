@@ -1,4 +1,12 @@
 
-<p>{{value}}</p>
-<input type="text" #box>
-<button (click)="update.emit(box.value)">updata data</button>
+<!-- <p>{{value}}</p> -->
+
+
+
+<!-- <li>{{box.value}}</li> -->
+<input type="text" #box  >
+<button (click)="arraypush(box.value) ; update.emit(box.value) ; box.value=''    "    >updata data</button>
+
+<ul *ngFor="let item_li of li_array">
+  <li>{{item_li}}</li>
+</ul>

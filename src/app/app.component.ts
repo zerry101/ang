@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -62,10 +63,21 @@ user_data=[
   {name:"io",id:65}
 ]
 
-data:string='x';
+data:string=' ';
+
 update_data(data_value:any){
   console.log(data_value);
   this.data=data_value;
 }
+
+
+// name_1:any="";
+name1 :any ;
+
+
+get_r_val(str:any){
+  console.log(str);
+}
+
 
 }

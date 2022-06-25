@@ -122,7 +122,7 @@
 <p>PARENT TO CHILD DATA </p>
 
 <ul *ngFor="let data of user_data">
-  <app-user-details [item]=data></app-user-details>
+  <app-user-details [item]="data"></app-user-details>
 </ul>
 
 <p>CHILD TO PARENT DATA </p>
@@ -132,4 +132,36 @@
 <app-child [value]=data (update)="update_data($event)">
 </app-child>
 
+<p>
+  ==================================================================================================================
+</p>
+
+
+<p>Two way binding</p>
+
+
+<p>{{name1}}</p>
+
+<input type="text" [(ngModel)]="name1" >
+
+
+<p>
+  ==================================================================================================================
+</p>
+
+<h1>reference variable </h1>
+
+<input type="text" #inp>
+<br>
+<button (click)=get_r_val(inp.value) >Click me</button>
+
+<p>
+  ==================================================================================================================
+</p>
+
+<h1>pipes</h1>
+
+<p>{{title|uppercase}}</p>
+<p>{{title|lowercase}}</p>
+<p>{{title|titlecase}}</p>
 
